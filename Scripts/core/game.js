@@ -1,4 +1,5 @@
 /* core game script */
+/// <reference path="./_reference.ts"/>
 // IIFE - Immediately Invoked Function Expression
 (function () {
     // CreateJS Variables
@@ -19,11 +20,7 @@
     }
     function Game() {
         console.log("Game Started...");
-        helloLabel = new createjs.Text("Hello, World!", "40px Consolas", "#000000");
-        helloLabel.regX = helloLabel.getMeasuredWidth() * 0.5;
-        helloLabel.regY = helloLabel.getMeasuredHeight() * 0.5;
-        helloLabel.x = 160;
-        helloLabel.y = 240;
+        helloLabel = new objects.Label("Hello, World!", "40px Consolas", "#000000", 160, 240, true);
         stage.addChild(helloLabel);
     }
     window.onload = Start; // calls the Start function when the window finishes loading
